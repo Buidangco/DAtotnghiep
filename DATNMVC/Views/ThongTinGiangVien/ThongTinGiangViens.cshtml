@@ -1,0 +1,31 @@
+﻿@model IEnumerable<DATNMVC.Models.ThongTinGiangVien>
+
+@{
+    ViewBag.Title = "ThongTinGiangViens";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table id="example" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+        <tr>
+            <th>Họ Tên</th>
+            <th>Phòng ban</th>
+            <th>Đơn vị công tác</th>
+            <th>Chuyên ngành</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.hoTen</td>
+                <td>@item.phongBan</td>
+                <td>@item.DonViCongTac</td>
+                <td>@item.chuyenNganh</td>
+            </tr>
+        }
+    </tbody>
+</table>

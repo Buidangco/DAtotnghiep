@@ -1,0 +1,71 @@
+﻿@model DATNMVC.Models.DuAn
+
+@{
+    ViewBag.Title = "CreateDuAn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>CreateDuAn</h2>
+
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-12">
+                @using (Html.BeginForm("AddDunAn", "ThongTinGiangVien", "Post"))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TenDeTaiNghienCuu, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.TenDeTaiNghienCuu, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.TenDeTaiNghienCuu, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.NgayHoanThanh, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.NgayHoanThanh, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.NgayHoanThanh, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.DeTaiCap, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.DeTaiCap, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.DeTaiCap, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="display:flex">
+                        @Html.LabelFor(model => model.ThongTinGiangVien, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.DropDownList("ID", (MultiSelectList)ViewBag.TypeItemList, new { Multiple = "multiple", @class = "selectpicker" })
+                            @Html.ValidationMessageFor(model => model.idThongTinGiangVien, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TrachNhiemThamGia, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.TrachNhiemThamGia, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.TrachNhiemThamGia, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-offset-2 col-md-10" style="padding-left: 80%;">
+                            <input type="submit" value="Create" class="btn btn-danger" style="float:right" />
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('.selectpicker').selectpicker();
+</script>

@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Home | E-Shopper</title>
+    <link href="~/Areas/Area/Content/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Areas/Area/Content/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Areas/Area/Content/css/prettyPhoto.css" rel="stylesheet">
+    <link href="~/Areas/Area/Content/css/price-range.css" rel="stylesheet">
+    <link href="~/Areas/Area/Content/css/animate.css" rel="stylesheet">
+    <link href="~/Areas/Area/Content/css/main.css" rel="stylesheet">
+    <link href="~/Areas/Area/Content/css/responsive.css" rel="stylesheet">
+    <link rel="shortcut icon" href="~/Areas/Area/Content/images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <style>
+        .category-products .panel-default .panel-heading .panel-title a {
+            color:white;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .header-bottom {
+            padding-bottom: 0px !important;
+            padding-top: 30px !important;
+        }
+        .category-tab ul {
+            background: #008dc2 !important;
+        }
+       .category-tab ul li a {
+                color: white;
+            }
+        .gv-content .mainsection div.breadcrumbs {
+            margin-top: -10px;
+            margin-left: 10px;
+        }
+        .footer-bottom {
+            background: rgb(230, 230, 230) !important;
+        }
+    </style>
+</head>
+<!--/head-->
+
+<body style=" font-family: 'Roboto', sans-serif; font-size: 14px; background-color: #E6E6E6; line-height: 24px;">
+    <header id="header">
+        <!--header-->
+        <div class="header_top">
+            <!--header_top-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="contactinfo">
+                            <ul class="nav nav-pills">
+                                <li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
+                                <li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="social-icons pull-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/header_top-->
+        <!--/header-middle-->
+
+        <div class="header-bottom">
+            <!--header-bottom-->
+            <div class="container" style=" background: white;">
+                <div class="row">
+                    <div class="col-sm-9" style=" width: 100%;">
+                        <div class="navbar-header" style=" width: 100%;">
+                            <div class="top-bar" style="display: flex; padding: 8px;">
+                                <div class="welcome-bar fll">
+                                    <img style="width:96%" src="~/Areas/Area/Content/images/logo-wide.png" />
+                                </div>
+                                <div>
+                                    <img style="width:100%" src="~/Areas/Area/Content/images/upm.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/header-bottom-->
+    </header>
+    <!--/header-->
+    <section style="height: 700px;">
+        @RenderBody()
+    </section>
+
+    <footer id="footer">
+        <!--Footer-->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
+                    <p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!--/Footer-->
+    <script src="~/Areas/Area/Content/js/jquery.js"></script>
+    <script src="~/Areas/Area/Content/js/bootstrap.min.js"></script>
+    <script src="~/Areas/Area/Content/js/jquery.scrollUp.min.js"></script>
+    <script src="~/Areas/Area/Content/js/price-range.js"></script>
+    <script src="~/Areas/Area/Content/js/jquery.prettyPhoto.js"></script>
+    <script src="~/Areas/Area/Content/js/main.js"></script>
+</body>
+
+</html>

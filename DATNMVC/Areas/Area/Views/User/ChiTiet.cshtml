@@ -1,0 +1,206 @@
+﻿@model DATNMVC.Models.ThongTinGiangVien
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Area/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container" style=" background: white;">
+    <div class="row> <h2 class="title text-center" style=" background: #FE980F; color: white; padding: 10px;    font-size: 17px;">Website cá nhân - Đại học SPKT Hưng Yên</h2></div>
+    <div class="row" style=" margin-top: 2%;">
+        <div class="col-sm-12 padding-right" style=" background: white;">
+            <div class="product-details">
+                <!--product-details-->
+                <div class="col-sm-2">
+                    <div class="view-product" style=" margin-left: 42px;">
+                        <img src="~/Areas/Area/Content/images/@Model.Anh" " alt="" style="width: 120px;height: 180px;border: 2px solid #eee;" />
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <div style=" padding: 8px;">
+                        <div style=" font-size: 14px; color: black;">
+                            Họ và tên: @Model.hoTen
+                        </div>
+                        @foreach (var ite in @ViewBag.Chucvu)
+                        {
+                            if (ite.ID == @Model.idChucVu)
+                            {
+                                <div style=" font-size: 14px; color: black;">
+                                    Chức vụ:  @ite.tenChucVu
+                                </div>
+                            }
+                        }
+
+                        <div style=" font-size: 14px; color: black;">
+                            Đơn vị: @Model.DonViCongTac
+                        </div>
+                        <div style=" font-size: 14px; color: black;">
+                            Phòng ban: @Model.phongBan
+                        </div>
+                    </div>
+                    <!--/product-information-->
+                </div>
+            </div>
+            <!--/product-details-->
+
+            <div class="category-tab shop-details-tab">
+                <!--category-tab-->
+                <div class="col-sm-12">
+                    <ul class="nav nav-tabs">
+                        <li><a href="#details" data-toggle="tab">Thông tin chung</a></li>
+                        <li><a href="#companyprofile" data-toggle="tab">Đề tài dự án</a></li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane fade" id="details">
+                        <div class="tabcontent">
+                            <div id="tabid1" class="tabcontent-item active">
+                                <div class="mota">
+                                    <div class="custom">
+                                        <p>Cán bộ, giảng viên cung cấp&nbsp;thông tin lý lịch sơ lược, quá trình đào tạo, quá trình công tác, thành tích khen thưởng&nbsp;của bản thân.&nbsp;</p>
+                                    </div>
+                                </div>
+                                <p><span style="font-family:arial,helvetica,sans-serif;"><strong>I. LÝ LỊCH SƠ LƯỢC</strong></span></p>
+
+                                <p><span style="font-family:arial,helvetica,sans-serif;">Họ và tên: @Model.hoTen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+                                <p><span style="font-family:arial,helvetica,sans-serif;">Năm sinh: @Model.ngaySinh</span></p>
+
+                                <p><span style="font-family:arial,helvetica,sans-serif;">Học vị cao nhất: Tiến sĩ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+                                <p><span style="font-family:arial,helvetica,sans-serif;">Chức danh khoa học cao nhất: Phó giáo sư;</span></p>
+
+                                <p><span style="font-family:arial,helvetica,sans-serif;">Chức vụ: Phó giám đốc</span></p>
+
+                                <p><span style="font-family:arial,helvetica,sans-serif;">Đơn vị công tác: &nbsp;@Model.DonViCongTac</span></p>
+
+                                <p><span style="font-family:arial,helvetica,sans-serif;">E-mail: <a href="mailto:conghn@tnu.edu.vn">conghn@tnu.edu.vn</a>.</span></p>
+
+                                <p><span style="font-family:arial,helvetica,sans-serif;"><strong>II. QUÁ TRÌNH ĐÀO TẠO</strong></span></p>
+
+                                <p><span style="font-family:arial,helvetica,sans-serif;"><strong> Sau đại học</strong></span></p>
+                                @foreach (var item in @ViewBag.QTDT)
+                                {
+                                    <p><span style="font-family:arial,helvetica,sans-serif;">- Bằng Thạc sĩ chuyên ngành: @item.BangCap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Năm cấp bằng: @item.NamCap</span></p>
+
+                                    <p><span style="font-family:arial,helvetica,sans-serif;">Nơi đào tạo: @item.NoiDaoTao</span></p>
+
+                                }
+
+                                <p><span style="font-family:arial,helvetica,sans-serif;"></span></p>
+
+                                <p><span style="font-family:arial,helvetica,sans-serif;"><strong>III. QUÁ TRÌNH CÔNG TÁC CHUYÊN MÔN</strong></span></p>
+
+                                <p><span style="font-family:arial,helvetica,sans-serif;"></span></p>
+
+                                <table border="1" cellpadding="0" cellspacing="0" width="640">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width:160px;height:21px;">
+                                                <p align="center"><span style="font-family:arial,helvetica,sans-serif;"><strong>Thời gian</strong></span></p>
+                                            </td>
+                                            <td style="width:211px;height:21px;">
+                                                <p align="center"><span style="font-family:arial,helvetica,sans-serif;"><strong>Nơi công tác</strong></span></p>
+                                            </td>
+                                            <td style="width:270px;height:21px;">
+                                                <p align="center"><span style="font-family:arial,helvetica,sans-serif;"><strong>Công việc đảm nhiệm</strong></span></p>
+                                            </td>
+                                        </tr>
+                                        @foreach (var item1 in @ViewBag.QTCT)
+                                        {
+                                            <tr>
+                                                <td style="width:160px;height:26px;">
+                                                    <p><span style="font-family:arial,helvetica,sans-serif;">Từ @item1.ThoiGian</span></p>
+                                                </td>
+                                                <td style="width:211px;height:26px;">
+                                                    <p><span style="font-family:arial,helvetica,sans-serif;">Trường ĐH&nbsp;@item1.NoiCongTac</span></p>
+                                                </td>
+                                                <td style="width:270px;height:26px;">
+                                                    <p><span style="font-family:arial,helvetica,sans-serif;">@item1.CongViecDamNhiem</span></p>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div id="tabid2" class="tabcontent-item">
+                                <div class="mota">
+
+
+                                    <div class="custom">
+                                        <p>Cán bộ, giảng viên đưa thông tin giới thiệu về học phần (tên học phần, số tín chỉ ...) và học liệu điện tử chính thống cho từng học phần. Các tài liệu điện tử bao gồm&nbsp;file text (word, pdf...), file audio, file video.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="companyprofile">
+                        <div id="tabid3" class="tabcontent-item active">
+                            <div class="mota">
+
+
+                                <div class="custom">
+                                    <p>Cán bộ, giảng viên đưa thông tin về các đề tài, dự án các cấp đã nghiệm thu hoặc&nbsp;đang được thực hiện</p>
+                                </div>
+                            </div>
+
+                            <p><strong>Các đề tài nghiên cứu khoa học đã tham gia</strong></p>
+
+                            <p>&nbsp;</p>
+
+                            <table border="1" cellpadding="0" cellspacing="0" width="869">
+                                <tbody>
+                                    <tr>
+                                        <td style="width:57px;">
+                                            <p align="center"><strong>Stt</strong></p>
+                                        </td>
+                                        <td style="width:359px;">
+                                            <p align="center" style="margin-left:1.7pt;"><strong>Tên đề tài nghiên cứu/ Lĩnh vực ứng dụng</strong></p>
+                                        </td>
+                                        <td style="width:123px;">
+                                            <p align="center"><strong>Năm</strong></p>
+
+                                            <p align="center"><strong>hoàn thành</strong></p>
+                                        </td>
+                                        <td style="width:161px;">
+                                            <p align="center"><strong>Đề tài cấp (Nhà nước, Bộ, ngành, trường)</strong></p>
+                                        </td>
+                                        <td style="width:170px;">
+                                            <p align="center"><strong>Trách nhiệm tham gia trong đề tài</strong></p>
+                                        </td>
+                                    </tr>
+                                    @foreach (var item2 in @ViewBag.Duan)
+                                    {
+                                        var i = 0;
+                                        i += 1;
+                                        <tr>
+                                            <td style="width:57px;height:32px;">
+                                                @i
+                                            </td>
+                                            <td style="width:359px;height:32px;">
+                                                <p align="left" style="margin-left:1.7pt;">@item2.TenDeTaiNghienCuu</p>
+                                            </td>
+                                            <td style="width:123px;height:32px;">
+                                                <p align="center">@item2.NgayHoanThanh</p>
+                                            </td>
+                                            <td style="width:161px;height:32px;">
+                                                <p align="center">@item2.DeTaiCap</p>
+                                            </td>
+                                            <td style="width:170px;height:32px;">
+                                                <p align="center">@item2.TrachNhiemThamGia</p>
+                                            </td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

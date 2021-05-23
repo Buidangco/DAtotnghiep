@@ -1,0 +1,68 @@
+﻿@model IEnumerable<DATNMVC.Models.ThongTinGiangVien>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Area/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container" style=" background: white;">
+    <div class="row" style=" margin-top: 5%;">
+        <div class="col-sm-3">
+            <div class="left-sidebar">
+                <h2>Khoa</h2>
+                <div class="panel-group category-products" id="accordian">
+                    @Html.Action("Khoas", "User")
+                </div>
+                <!--/category-products-->
+                <!--/shipping-->
+            </div>
+        </div>
+
+        <div class="col-sm-9 padding-right">
+            <div class="features_items">
+                <!--features_items-->
+                <h2 class="title text-center" style=" background: #FE980F; color: white; padding: 10px;">Thông tin giảng viên</h2>
+                @foreach (var item in Model)
+                {
+                    <div class="col-sm-6">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <a href="/Area/User/GetThongTinGiangVien1/@item.ID" style="        display: flex;padding: 5px;border: 1px solid lightgray;">
+                                        <img style=" width: 60px; height: 80px; display: block; border: 2px solid #bebebe;" src="~/Areas/Area/Content/images/@item.Anh" alt="" />
+                                        <div style=" margin: auto; font-size: 14px;margin-left:4px">
+                                            <div style="text-decoration: none;color: #008dc2;width: 100%;">
+                                                @item.hoTen
+                                            </div>
+                                            @foreach (var ite in @ViewBag.Chucvu)
+                                            {
+                                                if (ite.ID == @item.idChucVu)
+                                                {
+                                                    <div style=" font-size: 12px; color: black; width: 100%;">
+                                                        @ite.tenChucVu
+                                                    </div>
+                                                }
+                                            }
+                                            <div style="font-size: 12px; color: black; width: 100%;">
+                                                @item.DonViCongTac
+                                            </div>
+                                        </div>
+
+                                    </a>
+                                </div>
+                                @*<div class="product-overlay">
+                                        <div class="overlay-content">
+                                            <p>Easy Polo Black Edition</p>
+                                        </div>
+                                    </div>*@
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

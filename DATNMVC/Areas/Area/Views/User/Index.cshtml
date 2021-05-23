@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Area/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container" style=" background: white;">
+    <div class="row" style=" margin-top: 5%;">
+        <div class="col-sm-3">
+            <div class="left-sidebar">
+                <h2>
+                    <div class="welcome-bar fll">
+                        <span>Khoa</span>
+                    </div>
+                </h2>
+                <div class="panel-group category-products" id="accordian">
+                    @Html.Action("Khoas", "User")
+                </div>
+                <!--/category-products-->
+                <!--/shipping-->
+            </div>
+        </div>
+        <div class="col-sm-9 padding-right">
+            <div class="features_items">
+                <!--features_items-->
+                <h2 class="title text-center" style=" background: #FE980F; color: white; padding: 10px;">Cổng thông tin</h2>
+                <div class="col-sm-12">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="~/Areas/Area/Content/images/461b1066e73b4ab28c162a924c1fa995_2021.jpg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

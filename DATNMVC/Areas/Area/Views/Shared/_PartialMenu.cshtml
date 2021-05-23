@@ -1,0 +1,13 @@
+﻿@model IEnumerable<DATNMVC.Models.Khoa>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        @foreach (var item in Model)
+        {
+            <h4 class="panel-title" style="        padding: 10px;
+        background: #ef8f0f;
+        margin-top: 2px">
+                @Html.ActionLink(@item.Name, "GetThongTinGiangVien", new { id = item.Id }, new { id = "@Id" })
+            </h4>
+        }
+    </div>
+</div>

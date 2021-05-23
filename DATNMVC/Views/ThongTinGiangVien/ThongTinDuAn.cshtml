@@ -1,0 +1,37 @@
+﻿@model IEnumerable<DATNMVC.Models.DuAn>
+@{
+    ViewBag.Title = "ThongTinDuAn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<p>
+    <a href="/ThongTinGiangVien/CreateDuAn">Thêm thông tin</a>
+</p>
+<table id="example" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+        <tr>
+            <th>Giảng Viên</th>
+            <th>Tên đề tài</th>
+            <th>Cấp đề tài</th>
+            <th>Trách nhiệm</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            @foreach (var ite in @ViewBag.ThongTin)
+            {
+                if (ite.ID == @item.idThongTinGiangVien)
+                {
+                    <td>@ite.hoTen</td>
+                }
+            }
+            <td>@item.TenDeTaiNghienCuu</td>
+            <td>@item.DeTaiCap</td>
+            <td>@item.TrachNhiemThamGia</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+
