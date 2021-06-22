@@ -136,44 +136,43 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ChucVu.cs">
-      <DependentUpon>ThongTinGiangVien.tt</DependentUpon>
+      <DependentUpon>GiangVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DuAn.cs">
-      <DependentUpon>ThongTinGiangVien.tt</DependentUpon>
+      <DependentUpon>GiangVien.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GiangVien.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GiangVien.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GiangVien.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GiangVien.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GiangVien.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GiangVien.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Khoa.cs">
-      <DependentUpon>ThongTinGiangVien.tt</DependentUpon>
+      <DependentUpon>GiangVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\QuaTrinhCongTac.cs">
-      <DependentUpon>ThongTinGiangVien.tt</DependentUpon>
+      <DependentUpon>GiangVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\QuaTrinhDaoTao.cs">
-      <DependentUpon>ThongTinGiangVien.tt</DependentUpon>
+      <DependentUpon>GiangVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>ThongTinGiangVien.tt</DependentUpon>
+      <DependentUpon>GiangVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TaiKhoan.cs">
-      <DependentUpon>ThongTinGiangVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ThongTin.cs" />
-    <Compile Include="Models\ThongTinGiangVien.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ThongTinGiangVien.Context.tt</DependentUpon>
+      <DependentUpon>GiangVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ThongTinGiangVien.cs">
-      <DependentUpon>ThongTinGiangVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ThongTinGiangVien.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ThongTinGiangVien.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ThongTinGiangVien1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ThongTinGiangVien.tt</DependentUpon>
+      <DependentUpon>GiangVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -268,15 +267,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\ThongTinGiangVien.Context.tt">
+    <Content Include="Models\GiangVien.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ThongTinGiangVien.edmx</DependentUpon>
-      <LastGenOutput>ThongTinGiangVien.Context.cs</LastGenOutput>
+      <DependentUpon>GiangVien.edmx</DependentUpon>
+      <LastGenOutput>GiangVien.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\ThongTinGiangVien.tt">
+    <Content Include="Models\GiangVien.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ThongTinGiangVien.edmx</DependentUpon>
-      <LastGenOutput>ThongTinGiangVien1.cs</LastGenOutput>
+      <DependentUpon>GiangVien.edmx</DependentUpon>
+      <LastGenOutput>GiangVien.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -285,17 +284,17 @@
     <Content Include="Areas\Area\Content\fonts\fontawesome-webfont.woff" />
     <Content Include="Areas\Area\Content\fonts\FontAwesome.otf" />
     <Content Include="Areas\Area\Content\fonts\glyphicons-halflings-regular.woff" />
-    <EntityDeploy Include="Models\ThongTinGiangVien.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ThongTinGiangVien.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\ThongTinGiangVien.edmx.diagram">
-      <DependentUpon>ThongTinGiangVien.edmx</DependentUpon>
-    </Content>
     <Content Include="Areas\Area\Views\Shared\_PartialMenu.cshtml" />
     <Content Include="Areas\Area\Views\User\Index1.cshtml" />
     <Content Include="Areas\Area\Views\User\ChiTiet.cshtml" />
     <None Include="Areas\Area\Views\User\Index.cshtml" />
+    <EntityDeploy Include="Models\GiangVien.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GiangVien.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\GiangVien.edmx.diagram">
+      <DependentUpon>GiangVien.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -327,6 +326,8 @@
     <Content Include="Views\ThongTinGiangVien\ThongTinDuAn.cshtml" />
     <Content Include="Views\ThongTinGiangVien\ThongTinQTCT.cshtml" />
     <Content Include="Views\ThongTinGiangVien\CreateDuAn.cshtml" />
+    <Content Include="Views\ThongTinGiangVien\Create.cshtml" />
+    <Content Include="Views\ThongTinGiangVien\Thongke.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -13,10 +13,10 @@ namespace DATNMVC.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DA_TOTNGHIEPEntities2 : DbContext
+    public partial class DA_TOTNGHIEPEntities3 : DbContext
     {
-        public DA_TOTNGHIEPEntities2()
-            : base("name=DA_TOTNGHIEPEntities2")
+        public DA_TOTNGHIEPEntities3()
+            : base("name=DA_TOTNGHIEPEntities3")
         {
         }
     
@@ -24,7 +24,7 @@ namespace DATNMVC.Models
         {
             throw new UnintentionalCodeFirstException();
         }
-        public virtual DbSet<ThongTin> ThongTins { get; set; }
+    
         public virtual DbSet<ChucVu> ChucVus { get; set; }
         public virtual DbSet<DuAn> DuAns { get; set; }
         public virtual DbSet<Khoa> Khoas { get; set; }

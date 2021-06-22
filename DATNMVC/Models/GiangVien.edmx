@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DA_TOTNGHIEPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="DA_TOTNGHIEPModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ChucVu">
           <Key>
             <PropertyRef Name="ID" />
@@ -143,7 +143,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DA_TOTNGHIEPModelStoreContainer">
+        <EntityContainer Name="DA_TOTNGHIEPModel1StoreContainer">
           <EntitySet Name="ChucVu" EntityType="Self.ChucVu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DuAn" EntityType="Self.DuAn" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Khoa" EntityType="Self.Khoa" Schema="dbo" store:Type="Tables" />
@@ -177,7 +177,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="DA_TOTNGHIEPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="DA_TOTNGHIEPModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="ChucVu">
           <Key>
             <PropertyRef Name="ID" />
@@ -326,7 +326,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DA_TOTNGHIEPEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DA_TOTNGHIEPEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="ChucVus" EntityType="Self.ChucVu" />
           <EntitySet Name="DuAns" EntityType="Self.DuAn" />
           <EntitySet Name="Khoas" EntityType="Self.Khoa" />
@@ -361,9 +361,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DA_TOTNGHIEPModelStoreContainer" CdmEntityContainer="DA_TOTNGHIEPEntities2">
+        <EntityContainerMapping StorageEntityContainer="DA_TOTNGHIEPModel1StoreContainer" CdmEntityContainer="DA_TOTNGHIEPEntities3">
           <EntitySetMapping Name="ChucVus">
-            <EntityTypeMapping TypeName="DA_TOTNGHIEPModel.ChucVu">
+            <EntityTypeMapping TypeName="DA_TOTNGHIEPModel1.ChucVu">
               <MappingFragment StoreEntitySet="ChucVu">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="tenChucVu" ColumnName="tenChucVu" />
@@ -371,7 +371,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="DuAns">
-            <EntityTypeMapping TypeName="DA_TOTNGHIEPModel.DuAn">
+            <EntityTypeMapping TypeName="DA_TOTNGHIEPModel1.DuAn">
               <MappingFragment StoreEntitySet="DuAn">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="TenDeTaiNghienCuu" ColumnName="TenDeTaiNghienCuu" />
@@ -383,7 +383,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Khoas">
-            <EntityTypeMapping TypeName="DA_TOTNGHIEPModel.Khoa">
+            <EntityTypeMapping TypeName="DA_TOTNGHIEPModel1.Khoa">
               <MappingFragment StoreEntitySet="Khoa">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -391,7 +391,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="QuaTrinhCongTacs">
-            <EntityTypeMapping TypeName="DA_TOTNGHIEPModel.QuaTrinhCongTac">
+            <EntityTypeMapping TypeName="DA_TOTNGHIEPModel1.QuaTrinhCongTac">
               <MappingFragment StoreEntitySet="QuaTrinhCongTac">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
@@ -402,7 +402,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="QuaTrinhDaoTaos">
-            <EntityTypeMapping TypeName="DA_TOTNGHIEPModel.QuaTrinhDaoTao">
+            <EntityTypeMapping TypeName="DA_TOTNGHIEPModel1.QuaTrinhDaoTao">
               <MappingFragment StoreEntitySet="QuaTrinhDaoTao">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="BangCap" ColumnName="BangCap" />
@@ -413,7 +413,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="DA_TOTNGHIEPModel.sysdiagram">
+            <EntityTypeMapping TypeName="DA_TOTNGHIEPModel1.sysdiagram">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -424,7 +424,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TaiKhoans">
-            <EntityTypeMapping TypeName="DA_TOTNGHIEPModel.TaiKhoan">
+            <EntityTypeMapping TypeName="DA_TOTNGHIEPModel1.TaiKhoan">
               <MappingFragment StoreEntitySet="TaiKhoan">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -434,7 +434,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ThongTinGiangViens">
-            <EntityTypeMapping TypeName="DA_TOTNGHIEPModel.ThongTinGiangVien">
+            <EntityTypeMapping TypeName="DA_TOTNGHIEPModel1.ThongTinGiangVien">
               <MappingFragment StoreEntitySet="ThongTinGiangVien">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="hoTen" ColumnName="hoTen" />

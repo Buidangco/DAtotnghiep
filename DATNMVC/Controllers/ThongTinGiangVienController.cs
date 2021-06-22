@@ -8,7 +8,6 @@ using System.Web.Mvc;
 using System.Web.Script.Serialization;
 using DATNMVC.Models;
 using Newtonsoft.Json;
-
 namespace DATNMVC.Controllers
 {
     public class ThongTinGiangVienController : Controller
@@ -96,22 +95,40 @@ namespace DATNMVC.Controllers
         [HttpGet]
         public ActionResult Create(ThongTinGiangVien model)
         {
+            ThongTinGiangVien thongTin = new ThongTinGiangVien();
+            string apiUrl = "https://localhost:44307/api";
+            HttpClient client = new HttpClient();
+            List<ChucVu> chucVus = new List<ChucVu>();
+            HttpClient client1 = new HttpClient();
+            HttpResponseMessage response4 = client1.GetAsync(apiUrl + string.Format("/ChucVus")).Result;
+            if (response4.IsSuccessStatusCode)
+            {
+                string data = response4.Content.ReadAsStringAsync().Result;
+                chucVus = JsonConvert.DeserializeObject<List<ChucVu>>(data);
+            }
+            List<Khoa> khoas = new List<Khoa>();
+            HttpResponseMessage response5 = client1.GetAsync(apiUrl + string.Format("/Khoas")).Result;
+            if (response5.IsSuccessStatusCode)
+            {
+                string data = response5.Content.ReadAsStringAsync().Result;
+                khoas = JsonConvert.DeserializeObject<List<Khoa>>(data);
+            }
+            ViewBag.chucvu = new MultiSelectList(chucVus, "ID", "tenChucVu");
+            ViewBag.khoa = new MultiSelectList(khoas, "ID", "Name");
             return View();
         }
 
         [HttpPost]
-        public ActionResult AddGiangVien(ThongTinGiangVien model)
+        public ActionResult AddGiangVien(ThongTinGiangVien model, int IDChuc, int IDKhoa)
         {
+            model.idChucVu = (byte)(byte?)IDChuc;
+            model.IdKhoa = (byte?)IDKhoa;
             string apiUrl = "https://localhost:44307/api";
             string data = JsonConvert.SerializeObject(model);
             HttpClient client = new HttpClient();
             StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
             HttpResponseMessage response = client.PostAsync(apiUrl + string.Format("/ThongTinGiangViens"), content).Result;
-            if (response.IsSuccessStatusCode)
-            {
-                return RedirectToAction("Index");
-            }
-            return View();
+            return RedirectToAction("ThongTinGiangViens");
         }
 
 
@@ -167,6 +184,32 @@ namespace DATNMVC.Controllers
             {
                 return RedirectToAction("ThongTinQTCT");
             }
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Thongke()
+        {
+            string apiUrl = "https://localhost:44307/api";
+            List<ThongTinGiangVien> thongTinGiangs = new List<ThongTinGiangVien>();
+            HttpClient client1 = new HttpClient();
+            HttpResponseMessage response4 = client1.GetAsync(apiUrl + string.Format("/ThongKeNam")).Result;
+            if (response4.IsSuccessStatusCode)
+            {
+                string data = response4.Content.ReadAsStringAsync().Result;
+                thongTinGiangs = JsonConvert.DeserializeObject<List<ThongTinGiangVien>>(data);
+            }
+            List<ThongTinGiangVien> thongTinGiangss = new List<ThongTinGiangVien>();
+            HttpResponseMessage response5 = client1.GetAsync(apiUrl + string.Format("/ThongKeNu")).Result;
+            if (response5.IsSuccessStatusCode)
+            {
+                string data = response5.Content.ReadAsStringAsync().Result;
+                thongTinGiangss = JsonConvert.DeserializeObject<List<ThongTinGiangVien>>(data);
+            }
+
+            ViewBag.Nam = thongTinGiangs.Count();
+            ViewBag.Nu = thongTinGiangss.Count();
+
             return View();
         }
     }
