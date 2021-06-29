@@ -77,6 +77,10 @@
     <Property Name="DonViCongTac" Type="nvarchar" MaxLength="250" />
     <Property Name="Anh" Type="nvarchar" MaxLength="550" />
     <Property Name="IdKhoa" Type="tinyint" />
+    <Property Name="GioiTinh" Type="bit" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="SDT" Type="nvarchar" MaxLength="50" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <Association Name="FK_DuAn_ThongTinGiangVien">
     <End Role="ThongTinGiangVien" Type="Self.ThongTinGiangVien" Multiplicity="0..1" />

@@ -2,11 +2,17 @@
 @{
     ViewBag.Title = "ThongTinDuAn";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var taikhoan = Session["Taikhoan"] as DATNMVC.Models.TaiKhoan;
 }
-<p>
-    <a href="/ThongTinGiangVien/CreateDuAn">Thêm thông tin</a>
-</p>
-<table id="example" class="table table-striped table-bordered" style="width:100%">
+@{
+    if (taikhoan.Role == "Admin")
+    {
+        <p class="btn btn-secondary text-white">
+            <a href="/ThongTinGiangVien/CreateDuAn" style="text-decoration: none; color: white;">Thêm thông tin</a>
+        </p>
+    }
+}
+<table id="example" class="table table-striped table-bordered" style="width:100%;font-family: -webkit-body;">
     <thead>
         <tr>
             <th>Giảng Viên</th>

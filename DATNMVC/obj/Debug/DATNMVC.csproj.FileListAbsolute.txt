@@ -81,3 +81,7 @@ C:\Users\BuiDangCo\Source\Repos\DATNMVC\DATNMVC\obj\Debug\DATNMVC.csproj.CopyCom
 C:\Users\BuiDangCo\Source\Repos\DATNMVC\DATNMVC\obj\Debug\DATNMVC.dll
 C:\Users\BuiDangCo\Source\Repos\DATNMVC\DATNMVC\obj\Debug\DATNMVC.pdb
 C:\Users\BuiDangCo\Source\Repos\DATNMVC\DATNMVC\obj\Debug\DATNMVC.csprojAssemblyReference.cache
+C:\Users\BuiDangCo\Source\Repos\DATNMVC\DATNMVC\bin\PagedList.dll
+C:\Users\BuiDangCo\Source\Repos\DATNMVC\DATNMVC\bin\PagedList.Mvc.dll
+C:\Users\BuiDangCo\Source\Repos\DATNMVC\DATNMVC\bin\PagedList.xml
+C:\Users\BuiDangCo\Source\Repos\DATNMVC\DATNMVC\bin\PagedList.Mvc.xml

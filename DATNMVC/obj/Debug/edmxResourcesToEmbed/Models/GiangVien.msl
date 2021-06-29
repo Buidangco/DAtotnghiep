@@ -75,6 +75,10 @@
     <EntitySetMapping Name="ThongTinGiangViens">
       <EntityTypeMapping TypeName="DA_TOTNGHIEPModel1.ThongTinGiangVien">
         <MappingFragment StoreEntitySet="ThongTinGiangVien">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="hoTen" ColumnName="hoTen" />
           <ScalarProperty Name="ngaySinh" ColumnName="ngaySinh" />

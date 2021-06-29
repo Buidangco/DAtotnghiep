@@ -2,10 +2,11 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Area/Views/Shared/_Layout.cshtml";
+    var i = 0;
 }
 
 <div class="container" style=" background: white;">
-    <div class="row> <h2 class="title text-center" style=" background: #FE980F; color: white; padding: 10px;    font-size: 17px;">Website cá nhân - Đại học SPKT Hưng Yên</h2></div>
+    <div class="row"><a href="/Area/User/Index"> <h2 class="title text-center" style=" background: #008dc2; color: white; padding: 10px;padding-right: 60%;    font-size: 14px;">Website cá nhân - Đại học SPKT Hưng Yên</h2></a></div>
     <div class="row" style=" margin-top: 2%;">
         <div class="col-sm-12 padding-right" style=" background: white;">
             <div class="product-details">
@@ -19,6 +20,9 @@
                     <div style=" padding: 8px;">
                         <div style=" font-size: 14px; color: black;">
                             Họ và tên: @Model.hoTen
+                        </div>
+                        <div style=" font-size: 14px; color: black;">
+                            Bộ môn : @Model.chuyenNganh
                         </div>
                         @foreach (var ite in @ViewBag.Chucvu)
                         {
@@ -65,16 +69,21 @@
 
                                 <p><span style="font-family:arial,helvetica,sans-serif;">Năm sinh: @Model.ngaySinh</span></p>
 
-                                <p><span style="font-family:arial,helvetica,sans-serif;">Học vị cao nhất: Tiến sĩ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+                                @foreach (var ite in @ViewBag.Chucvu)
+                                {
+                                    if (ite.ID == @Model.idChucVu)
+                                    {
+                                        <div style=" font-size: 14px; color: black;">
+                                            <p><span style="font-family:arial,helvetica,sans-serif;">Chức vụ: @ite.tenChucVu</span></p>
 
-                                <p><span style="font-family:arial,helvetica,sans-serif;">Chức danh khoa học cao nhất: Phó giáo sư;</span></p>
-
-                                <p><span style="font-family:arial,helvetica,sans-serif;">Chức vụ: Phó giám đốc</span></p>
+                                        </div>
+                                    }
+                                }
 
                                 <p><span style="font-family:arial,helvetica,sans-serif;">Đơn vị công tác: &nbsp;@Model.DonViCongTac</span></p>
 
-                                <p><span style="font-family:arial,helvetica,sans-serif;">E-mail: <a href="mailto:conghn@tnu.edu.vn">conghn@tnu.edu.vn</a>.</span></p>
-
+                                <p><span style="font-family:arial,helvetica,sans-serif;">E-mail: <a href="mailto:conghn@tnu.edu.vn">@Model.Email</a>.</span></p>
+                                <p><span style="font-family:arial,helvetica,sans-serif;">Sđt: <a href="mailto:conghn@tnu.edu.vn">@Model.SDT</a>.</span></p>
                                 <p><span style="font-family:arial,helvetica,sans-serif;"><strong>II. QUÁ TRÌNH ĐÀO TẠO</strong></span></p>
 
                                 <p><span style="font-family:arial,helvetica,sans-serif;"><strong> Sau đại học</strong></span></p>
@@ -173,7 +182,7 @@
                                     </tr>
                                     @foreach (var item2 in @ViewBag.Duan)
                                     {
-                                        var i = 0;
+
                                         i += 1;
                                         <tr>
                                             <td style="width:57px;height:32px;">
