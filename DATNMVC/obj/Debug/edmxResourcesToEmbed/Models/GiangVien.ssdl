@@ -61,7 +61,7 @@
     </Key>
     <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="50" />
-    <Property Name="Role" Type="nvarchar" MaxLength="50" />
+    <Property Name="CodeGiangVien" Type="nvarchar" MaxLength="50" />
     <Property Name="PassWord" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="ThongTinGiangVien">

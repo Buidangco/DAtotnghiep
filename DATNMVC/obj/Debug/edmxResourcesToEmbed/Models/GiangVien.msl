@@ -65,9 +65,9 @@
     <EntitySetMapping Name="TaiKhoans">
       <EntityTypeMapping TypeName="DA_TOTNGHIEPModel1.TaiKhoan">
         <MappingFragment StoreEntitySet="TaiKhoan">
+          <ScalarProperty Name="CodeGiangVien" ColumnName="CodeGiangVien" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Role" ColumnName="Role" />
           <ScalarProperty Name="PassWord" ColumnName="PassWord" />
         </MappingFragment>
       </EntityTypeMapping>

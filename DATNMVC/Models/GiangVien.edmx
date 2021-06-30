@@ -66,7 +66,7 @@
           </Key>
           <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
-          <Property Name="Role" Type="nvarchar" MaxLength="50" />
+          <Property Name="CodeGiangVien" Type="nvarchar" MaxLength="50" />
           <Property Name="PassWord" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="ThongTinGiangVien">
@@ -247,8 +247,8 @@
           </Key>
           <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="PassWord" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CodeGiangVien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ThongTinGiangVien">
           <Key>
@@ -433,9 +433,9 @@
           <EntitySetMapping Name="TaiKhoans">
             <EntityTypeMapping TypeName="DA_TOTNGHIEPModel1.TaiKhoan">
               <MappingFragment StoreEntitySet="TaiKhoan">
+                <ScalarProperty Name="CodeGiangVien" ColumnName="CodeGiangVien" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Role" ColumnName="Role" />
                 <ScalarProperty Name="PassWord" ColumnName="PassWord" />
               </MappingFragment>
             </EntityTypeMapping>

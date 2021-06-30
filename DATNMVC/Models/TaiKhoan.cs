@@ -16,7 +16,7 @@ namespace DATNMVC.Models
     {
         public byte ID { get; set; }
         public string Name { get; set; }
-        public string Role { get; set; }
         public string PassWord { get; set; }
+        public string CodeGiangVien { get; set; }
     }
 }

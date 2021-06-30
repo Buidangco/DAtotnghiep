@@ -6,7 +6,7 @@
     var taikhoan = Session["Taikhoan"] as DATNMVC.Models.TaiKhoan;
 }
 @{
-    if (taikhoan.Role == "Admin")
+    if (taikhoan.CodeGiangVien == "Admin")
     {
         <p class="btn btn-secondary text-white">
             <a href="/ThongTinGiangVien/Create" style=" text-decoration: none;color:white">Thêm giảng viên</a>
@@ -32,7 +32,7 @@
             <td>@item.Email</td>
             <td>@item.DonViCongTac</td>
             <td>@item.chuyenNganh</td>
-            @if (taikhoan.Role == item.Code || taikhoan.Role == "Admin")
+            @if (taikhoan.CodeGiangVien == item.Code || taikhoan.CodeGiangVien == "Admin")
             {
                 <td><a href="/ThongTinGiangVien/Update/@item.ID"><svg style=" width: 133px; height: 31px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-left" viewBox="0 0 16 16">
     <path fill-rule="evenodd" d="M7.364 3.5a.5.5 0 0 1 .5-.5H14.5A1.5 1.5 0 0 1 16 4.5v10a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 3 14.5V7.864a.5.5 0 1 1 1 0V14.5a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5v-10a.5.5 0 0 0-.5-.5H7.864a.5.5 0 0 1-.5-.5z" />

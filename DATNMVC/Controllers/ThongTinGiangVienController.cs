@@ -138,7 +138,7 @@ namespace DATNMVC.Controllers
 
             TaiKhoan model1 = new TaiKhoan();
             model1.Name = model.Email;
-            model1.Role = Code;
+            model1.CodeGiangVien = Code;
             model1.PassWord = "12345";
             string data1 = JsonConvert.SerializeObject(model1);
             HttpClient client1 = new HttpClient();

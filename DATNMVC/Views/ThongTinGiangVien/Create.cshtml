@@ -22,7 +22,8 @@
                     <div class="form-group">
                         <label class="control-label col-md-2">Họ tên</label>
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.hoTen, new { htmlAttributes = new { @class = "form-control" } })
+                            <input type="text" maxlength="30" name="hoTen" class="form-control">
+                            @*@Html.EditorFor(model => model.hoTen, new { htmlAttributes = new { @class = "form-control" } })*@
                             @Html.ValidationMessageFor(model => model.hoTen, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -38,7 +39,8 @@
                     <div class="form-group">
                         <label class="control-label col-md-2">Phòng ban</label>
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.phongBan, new { htmlAttributes = new { @class = "form-control" } })
+                            <input type="text" maxlength="30" name="phongBan" class="form-control">
+                            @*@Html.EditorFor(model => model.phongBan, new { htmlAttributes = new { @class = "form-control" } })*@
                             @Html.ValidationMessageFor(model => model.phongBan, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -75,7 +77,8 @@
                     <div class="form-group">
                         <label class="control-label col-md-2">Email</label>
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                            <input type="email" name="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            @*@Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })*@
                             @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                         </div>
                     </div>
